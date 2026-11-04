@@ -1,0 +1,54 @@
+{
+  "name": "@galicea-lab/nextjs-keycloak-auth",
+  "version": "0.1.28",
+  "description": "Reusable Keycloak authentication components for Next.js applications",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galicea-lab/galwork-react.git",
+    "directory": "packages/nextjs-keycloak-auth"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && node scripts/build.mjs",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "next": ">=14",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "keycloak-js": "^26.0.0",
+    "pkce-challenge": "^6.0.0",
+    "react-i18next": "^17.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.28.2",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

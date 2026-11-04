@@ -1,2 +1,3 @@
 # galwork-react
-Komponenty react dla projektu Galwork
+Components for reactjs
+Część projektu galwork

@@ -1,0 +1,54 @@
+{
+  "name": "@galicea-lab/rjsf-widgets",
+  "version": "0.1.1",
+  "description": "Tailwind theme, SchemaForm wrapper and custom widgets (AsyncSelectWidget/TreeSelectWidget) for react-jsonschema-form (RJSF), shared across the Galwork apps",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galicea-lab/galwork-react.git",
+    "directory": "packages/rjsf-widgets"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && node scripts/build.mjs",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "@iconify/react": ">=5.0.0",
+    "@rjsf/core": ">=6.0.0",
+    "@rjsf/utils": ">=6.0.0",
+    "@rjsf/validator-ajv8": ">=6.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@iconify/react": "^6.0.2",
+    "@rjsf/core": "^6.1.0",
+    "@rjsf/utils": "^6.1.0",
+    "@rjsf/validator-ajv8": "^6.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.28.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
